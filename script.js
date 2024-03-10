@@ -24,21 +24,38 @@ const model = new OpenAI({
   model: 'gpt-3.5-turbo'
 });
 // console.log({ model }); // confirm connection to OpenAI
-  
-const promptFunc = async () => {
+
+// function to invoke OpenAI
+const promptFunc = async (input) => {
+  console.log(input)
   try {
-    const res = await model.invoke({
-      content: "How do you capitalize all characters of a string in JavaScript?"
-    });
+    // const res = await model.invoke({
+    //   content: "How do you capitalize all characters of a string in JavaScript?"
+    // });
+    const res = await model.invoke(input);
     console.log(res);
   }
   catch (err) {
     console.error(err);
   }
 };
+// promptFunc(); // Calling the Model
 
-// promptFunc();
+// function to prompt user using inquirer package
+const init = () => {
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: 'Ask a coding question:',
+    },
+  ]).then((inquirerResponse) => {
+    // console.log(inquirerResponse.name) // test promted input
+    promptFunc(inquirerResponse.name)
+  });
+};
 
+init(); // User Input with Inquirer
 
 
 
