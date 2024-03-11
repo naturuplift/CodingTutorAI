@@ -19,20 +19,63 @@
     <a href="https://opensource.org/license/mit/">
         <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=lightgreen" /></a>
 </p>
-<br/>-
+<br/>
 
+Streamline your JavaScript learning with CodingTutorAI, a Node.js command-line application that serves as your personal JavaScript consultant. Ask any question related to JavaScript concepts, and get precise, insightful answers to enhance your coding skills.
 
-Test Prompt Template:
+## Features
+
+-   Get answers to JavaScript-related questions instantly.
+-   Interactive CLI for easy use and quick learning.
+-   Coverage of a wide range of JavaScript concepts from basics to advanced topics.
+
+## Installation
+
+1. Clone this repository to your local machine:
+```bash
+git clone https://github.com/naturuplift/CodingTutorAI.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd CodingTutorAI
+```
+
+3. Install the required dependencies:
+```bash
+npm install
+```
+
+## Usage
+
+Launch the application with:
+```bash
+node app.js
+```
+and start asking your JavaScript questions.
+
+## Screenshots
+
+Below are sample screenshots showcasing the application functionality.
+
+JavaScript Question:
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/fd32e717-fc43-40d8-9e85-1b5593cee227)
 
-Answer:
+Answer without Prompt Template:
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/f9ac2556-79e1-4984-8d90-135cde4bf889)
 
-Question:
+JavaScript Question:
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/37549180-dd37-4cfb-867c-a310c99f5d15)
 
-Answer:
+Answer with Prompt Template:
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/2d0f8c5b-c367-4b74-9f1a-a1e22fee3849)
 
+## Contributing
 
+Contributions are welcome! Feel free to submit pull requests or open issues with suggestions for improvements.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE][MIT] file for details.
+
+[MIT]: <https://github.com/naturuplift/CodingTutorAI/blob/main/LICENSE>
