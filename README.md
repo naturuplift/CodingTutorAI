@@ -1,5 +1,25 @@
 # CodingTutorAI
 
+<br/>
+<p align="center">
+    <a href="https://www.openai.com/" >
+        <img alt="OpenAI's GPT-3 (for AI-powered features) - An autoregressive language model that uses deep learning to produce human-like text" src="https://img.shields.io/static/v1.svg?label=OpenAI&message=GPT-3-turbo&color=brightgreen" /></a>
+    <a href="https://nodejs.org/" >
+        <img alt="Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine, used for building fast and scalable network applications" src="https://img.shields.io/static/v1.svg?label=Node.js&message=JavaScript runtime&color=lightyellow" /></a>
+    <a href="https://expressjs.com/" >
+        <img alt="Express.js - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications" src="https://img.shields.io/static/v1.svg?label=Express.js&message=web app framework&color=blue" /></a>
+    <a href="https://www.npmjs.com/" >
+        <img alt="Node Package Manager" src="https://img.shields.io/static/v1.svg?label=npm&message=packages&color=lightblue" /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" >
+        <img alt="JavaScript - ES6" src="https://img.shields.io/static/v1.svg?label=JavaScript&message=ES6&color=violet" /></a>
+    <a href="https://github.com/">
+        <img alt="GitHub (for repository hosting and project management) - Provides hosting for software development and version control using Git" src="https://img.shields.io/static/v1.svg?label=GitHub&message=hosting&color=lightgrey" /></a>
+    <a href="https://git-scm.com/">
+        <img alt="Git (for version control) - A free and open-source distributed version control system" src="https://img.shields.io/static/v1.svg?label=Git&message=version control&color=black" /></a>
+    <a href="https://opensource.org/license/mit/">
+        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=lightgreen" /></a>
+</p>
+<br/>-
 
 
 Test Prompt Template:
