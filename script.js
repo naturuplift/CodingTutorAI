@@ -8,7 +8,9 @@ const { OpenAI } = require('@langchain/openai');
 // The promptTemplate object takes in a combination of user input
 // along with a fixed template string thereby allowing developers to set
 // hard-coded parameters but at the same time accept dynamic user input.
-const { PromptTemplate } = require("langchain/prompts");
+// Importing from "langchain/prompts" is deprecated
+// Instead, please import from "@langchain/core/prompts"
+const { PromptTemplate } = require("@langchain/core/prompts");
 
 // OpenAI has its own library, so it's important to point out that this
 // version of OpenAI comes directly from langchain. There's no
