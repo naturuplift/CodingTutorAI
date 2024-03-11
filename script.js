@@ -1,15 +1,19 @@
 // Include packages needed for this application
 require('dotenv').config();
 const inquirer = require('inquirer');
-
 // requiring the OpenAI dependency from langchain
 // const { OpenAI } = require('langchain/llms/openai'); // deprecated!
+// instaed to use next, run: npm install @langchain/openai
 const { OpenAI } = require('@langchain/openai');
+// The promptTemplate object takes in a combination of user input
+// along with a fixed template string thereby allowing developers to set
+// hard-coded parameters but at the same time accept dynamic user input.
+const { PromptTemplate } = require("langchain/prompts");
 
 // OpenAI has its own library, so it's important to point out that this
 // version of OpenAI comes directly from langchain. There's no
 // need to install any additional packages or libraries.
-const model = new OpenAI({
+const model = new OpenAI({ // Initialize OpenAI model
   // The openAIApiKey property is used to pass in our OpenAI API key
   // to check if a project is authorized to use the API and for collecting usage
   // information.
@@ -25,14 +29,30 @@ const model = new OpenAI({
 });
 // console.log({ model }); // confirm connection to OpenAI
 
-// function to invoke OpenAI
+// Function to invoke OpenAI with formatted prompt
 const promptFunc = async (input) => {
-  console.log(input)
+
   try {
-    // const res = await model.invoke({
+    // const res = await model.invoke({ // original when using call promptFunc()
     //   content: "How do you capitalize all characters of a string in JavaScript?"
     // });
-    const res = await model.invoke(input);
+
+    // const res = await model.invoke(input); // second test using inquirer input
+    // console.log(res);
+
+    // Instantiation of a new object called "prompt" using the "PromptTemplate" class
+    const prompt = new PromptTemplate({
+      template: "You are a JavaScript expert and will answer the user’s coding questions as thoroughly as possible.\n{question}",
+      inputVariables: ["question"],
+    });
+
+    // Format the prompt with user input
+    const promptInput = await prompt.format({
+      question: input
+    });
+
+    // Invoke the model with the formatted prompt
+    const res = await model.invoke(promptInput);
     console.log(res);
   }
   catch (err) {
@@ -42,7 +62,7 @@ const promptFunc = async (input) => {
 // promptFunc(); // Calling the Model
 
 // function to prompt user using inquirer package
-const init = () => {
+const init = () => { // User Input with Inquirer
   inquirer.prompt([
     {
       type: 'input',
@@ -55,8 +75,4 @@ const init = () => {
   });
 };
 
-init(); // User Input with Inquirer
-
-
-
-
+init(); // Start the application
