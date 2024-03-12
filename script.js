@@ -11,6 +11,21 @@ const { OpenAI } = require('@langchain/openai');
 // Importing from "langchain/prompts" is deprecated
 // Instead, please import from "@langchain/core/prompts"
 const { PromptTemplate } = require("@langchain/core/prompts");
+//  One of LangChain's output parsers is the StructuredOutputParser class
+// and will be the one we use in the application. There are two main
+// components to LangChain output parsers:
+// formatting instructions and the parsing method
+//  The formatting instructions play a pivotal role, allowing us to
+// construct the exact JSON that will be returned as the response
+// Additionally, we can use prompts to define the values of the data that
+// is being returned dynamically using OpenAI. For instance, not only can
+// we pass back the response, we can also ask OpenAI to provide additional
+// information such as a source, the date the source was last updated, or
+// even the response in another language! It's worth mentioning that the
+// additional information is not static. You can think of it as asking
+// follow-up questions based on the response and passed back to the user
+// as a more completed dataset. 
+const { StructuredOutputParser } = require("langchain/output_parsers");
 
 // OpenAI has its own library, so it's important to point out that this
 // version of OpenAI comes directly from langchain. There's no
