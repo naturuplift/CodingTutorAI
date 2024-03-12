@@ -62,7 +62,7 @@ and start asking your JavaScript questions.
 
 ## Screenshots
 
-Below are sample screenshots showcasing the application functionality.
+Below are sample screenshots showcasing the application functionality as functionality is implemented.
 
 JavaScript Question:
 
@@ -76,7 +76,7 @@ JavaScript Question:
 
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/37549180-dd37-4cfb-867c-a310c99f5d15)
 
-Answer with Prompt Template:
+Answer with Prompt Template imported 'const { PromptTemplate } = require("@langchain/core/prompts")':
 
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/2d0f8c5b-c367-4b74-9f1a-a1e22fee3849)
 
@@ -84,7 +84,7 @@ JavaScript Question:
 
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/37549180-dd37-4cfb-867c-a310c99f5d15)
 
-Answer with StructuredOutputParser:
+Answer with StructuredOutputParser imported 'const { StructuredOutputParser } = require("langchain/output_parsers")':
 
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/50108b20-bb13-4c0f-b623-d4647996fdb8)
 
