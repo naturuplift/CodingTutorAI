@@ -46,21 +46,25 @@ const model = new OpenAI({ // Initialize OpenAI model
 });
 // console.log({ model }); // confirm connection to OpenAI
 
+// Define response schema for the output
+const responseSchema = StructuredOutputParser.fromNamesAndDescriptions({
+  code: "Javascript code that answers the user's question",
+  explanation: "detailed explanation of the example code provided",
+});
+
+// new variable that will hold the value of the getFormatInstructions() method
+const formatInstructions = responseSchema.getFormatInstructions();
+
 // Function to invoke OpenAI with formatted prompt
 const promptFunc = async (input) => {
 
   try {
-    // const res = await model.invoke({ // original when using call promptFunc()
-    //   content: "How do you capitalize all characters of a string in JavaScript?"
-    // });
-
-    // const res = await model.invoke(input); // second test using inquirer input
-    // console.log(res);
 
     // Instantiation of a new object called "prompt" using the "PromptTemplate" class
     const prompt = new PromptTemplate({
-      template: "You are a JavaScript expert and will answer the user’s coding questions as thoroughly as possible.\n{question}",
+      template: "You are a javascript expert and will answer the user’s coding questions thoroughly as possible.\n{format_instructions}\n{question}",
       inputVariables: ["question"],
+      partialVariables: { format_instructions: formatInstructions }
     });
 
     // Format the prompt with user input
@@ -70,13 +74,15 @@ const promptFunc = async (input) => {
 
     // Invoke the model with the formatted prompt
     const res = await model.invoke(promptInput);
-    console.log(res);
+
+    // Parse the structured output
+    console.log(await responseSchema.parse(res));
+
   }
-  catch (err) {
-    console.error(err);
+  catch (parseError) {
+    console.error("Failed to parse structured output:", parseError);
   }
 };
-// promptFunc(); // Calling the Model
 
 // function to prompt user using inquirer package
 const init = () => { // User Input with Inquirer
