@@ -46,6 +46,12 @@ cd CodingTutorAI
 npm install
 ```
 
+## OpenAI API Key
+
+To use CodingTutorAI, you need an OpenAI API key. Sign up at OpenAI, verify your email, and set up billing with usage limits for safety. Generate an API key under "API Keys" in your OpenAI account. This key is crucial for making API calls from the application. Ensure you store this key securely, as it cannot be retrieved once lost. For detailed steps on obtaining and managing your OpenAI API key, refer to the OpenAI documentation and support forums.
+
+To utilize the AI-powered features of CodingTutorAI, create an .env file in the root directory. Inside this file, store your API key with the variable name OPENAI_API_KEY (e.g., OPENAI_API_KEY=your_api_key_here). This setup ensures secure and private access to the necessary AI services, keeping your API key hidden from public view.
+
 ## Usage
 
 Launch the application with:
@@ -59,15 +65,19 @@ and start asking your JavaScript questions.
 Below are sample screenshots showcasing the application functionality.
 
 JavaScript Question:
+
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/fd32e717-fc43-40d8-9e85-1b5593cee227)
 
 Answer without Prompt Template:
+
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/f9ac2556-79e1-4984-8d90-135cde4bf889)
 
 JavaScript Question:
+
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/37549180-dd37-4cfb-867c-a310c99f5d15)
 
 Answer with Prompt Template:
+
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/2d0f8c5b-c367-4b74-9f1a-a1e22fee3849)
 
 ## Contributing
