@@ -80,6 +80,14 @@ Answer with Prompt Template:
 
 ![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/2d0f8c5b-c367-4b74-9f1a-a1e22fee3849)
 
+JavaScript Question:
+
+![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/37549180-dd37-4cfb-867c-a310c99f5d15)
+
+Answer with StructuredOutputParser:
+
+![image](https://github.com/naturuplift/CodingTutorAI/assets/23546356/50108b20-bb13-4c0f-b623-d4647996fdb8)
+
 ## Contributing
 
 Contributions are welcome! Feel free to submit pull requests or open issues with suggestions for improvements.
